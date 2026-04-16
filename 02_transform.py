@@ -496,6 +496,7 @@ print(f"Maximum access attainable: {max_access_possible}%")
 
 # COMMAND ----------
 
+# DBTITLE 1,Current Coverage Map
 # VISUALIZE: CURRENT COVERAGE MAP
 
 _POP_VIZ_SAMPLE = 5_000
@@ -664,6 +665,7 @@ pareto_results = solve_mclp_greedy(w, JI, J_existing, J_potential, TARGET_NEW_FA
 
 # COMMAND ----------
 
+# DBTITLE 1,Pareto Frontier Graph
 # VISUALIZE: PARETO FRONTIER
 
 x_values = [len(J_existing) + item["p"] for item in pareto_results]
@@ -707,6 +709,7 @@ fig.show()
 
 # COMMAND ----------
 
+# DBTITLE 1,Map with new facilities
 # VISUALIZE: OPTIMIZED RESULT FOR TARGET_NEW_FACILITIES
 
 entry = next(item for item in pareto_results if item["p"] == TARGET_NEW_FACILITIES)
